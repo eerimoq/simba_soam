@@ -10,14 +10,7 @@ import cmd
 import threading
 import serial
 import hashlib
-
-try:
-    import lzma
-except ImportError:
-    try:
-        from backports import lzma
-    except ImportError:
-        print("Failed to import lmza.")
+import lzma
 
 try:
     from prompt_toolkit.completion import WordCompleter
@@ -30,10 +23,7 @@ except ImportError as e:
 import traceback
 from .socket_device import SocketDevice
 
-try:
-    from StringIO import StringIO
-except ImportError:
-    from io import StringIO
+from io import StringIO
 
 from .errnos import human_readable_errno
 
