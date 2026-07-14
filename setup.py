@@ -7,7 +7,7 @@ def find_version():
                      open('simba_soam/soam.py', 'r').read(),
                      re.MULTILINE).group(1)
 
-setup(name='bincopy',
+setup(name='simba_soam',
       version=find_version(),
       description=('Simba SOAM.'),
       long_description=open('README.md', 'r').read(),
@@ -15,7 +15,6 @@ setup(name='bincopy',
       author_email='erik.moqvist@gmail.com',
       license='MIT',
       classifiers=[
-          'License :: OSI Approved :: MIT License',
           'Programming Language :: Python :: 3.9',
       ],
       keywords=[],
@@ -25,7 +24,4 @@ setup(name='bincopy',
           'prompt_toolkit',
           'pyserial'
       ],
-      python_requires='>=3.9',
-      entry_points = {
-          'console_scripts': ['simba_soam=simba_soam:_main']
-      })
+      python_requires='>=3.9')
