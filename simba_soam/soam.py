@@ -27,7 +27,7 @@ from io import StringIO
 
 from .errnos import human_readable_errno
 
-__version__ = '4.2.0'
+__version__ = '4.3.0'
 
 # SOAM protocol definitions.
 SOAM_TYPE_STDOUT_PRINTF                = 1
