@@ -4,7 +4,7 @@ import re
 
 def find_version():
     return re.search(r"^__version__ = '(.*)'$",
-                     open('simba_soam/__init__.py', 'r').read(),
+                     open('simba_soam/soam.py', 'r').read(),
                      re.MULTILINE).group(1)
 
 setup(name='bincopy',
@@ -16,12 +16,15 @@ setup(name='bincopy',
       license='MIT',
       classifiers=[
           'License :: OSI Approved :: MIT License',
-          'Programming Language :: Python :: 3.13',
+          'Programming Language :: Python :: 3.9',
       ],
       keywords=[],
       url='https://github.com/eerimoq/simba_soam',
       py_modules=['simba_soam'],
-      install_requires=[],
+      install_requires=[
+          'prompt_toolkit',
+          'pyserial'
+      ],
       python_requires='>=3.9',
       entry_points = {
           'console_scripts': ['simba_soam=simba_soam:_main']
