@@ -27,7 +27,7 @@ from io import StringIO
 
 from .errnos import human_readable_errno
 
-__version__ = '4.2'
+__version__ = '4.2.0'
 
 # SOAM protocol definitions.
 SOAM_TYPE_STDOUT_PRINTF                = 1
@@ -896,8 +896,7 @@ def prompt_toolkit_shell(client, stdout, debug):
                           complete_while_typing=True,
                           auto_suggest=AutoSuggestFromHistory(),
                           enable_history_search=True,
-                          history=history,
-                          on_abort=AbortAction.RETRY)
+                          history=history)
         except EOFError:
             return
 
