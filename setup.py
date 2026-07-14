@@ -1,4 +1,5 @@
 from setuptools import setup
+from setuptools import find_packages
 import re
 
 
@@ -19,7 +20,7 @@ setup(name='simba_soam',
       ],
       keywords=[],
       url='https://github.com/eerimoq/simba_soam',
-      py_modules=['simba_soam'],
+      packages=find_packages(),
       install_requires=[
           'prompt_toolkit',
           'pyserial'
